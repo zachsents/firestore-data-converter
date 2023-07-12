@@ -1,0 +1,14 @@
+{
+    "name": "@zachsents/firestore-data-converter",
+    "version": "1.0.0",
+    "description": "An attempt at a universal data converter for Firestore",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test/test1"
+    },
+    "keywords": [],
+    "author": "zachsents",
+    "license": "ISC",
+    "type": "module",
+    "repository": "github:zachsents/firestore-data-converter"
+}
