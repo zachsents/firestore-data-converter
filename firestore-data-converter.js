@@ -1,3 +1,5 @@
+import { isInstanceOf } from "./util.js"
+
 
 /**
  * @typedef {object} FirestoreDataConverterOptions
@@ -85,13 +87,13 @@ export class FirestoreDataConverter {
         }
 
         // Case: Firestore types
-        switch (constructorName) {
-            case "DocumentReference":
-            case "GeoPoint":
-            case "Timestamp":
-            case "FieldValue":
-                return value
-        }
+        if ([
+            "DocumentReference",
+            "GeoPoint",
+            "Timestamp",
+            "FieldValue"
+        ].some(type => isInstanceOf(value, type)))
+            return value
 
         // Case: Date
         // Firestore will convert Date objects to Timestamps

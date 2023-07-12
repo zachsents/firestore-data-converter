@@ -1,6 +1,6 @@
 {
     "name": "@zachsents/firestore-data-converter",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An attempt at a universal data converter for Firestore",
     "main": "index.js",
     "scripts": {

@@ -17,6 +17,10 @@ const converter = new FirestoreDataConverter({
 })
 
 
+class FieldValue { }
+class ServerTimestampTransform extends FieldValue { }
+
+
 testToFirestore({
     a: 1,
     b: "poopy",
@@ -25,7 +29,8 @@ testToFirestore({
     e: new Date(),
     f: function test(a) {
         console.log("poopy")
-    }
+    },
+    g: new ServerTimestampTransform(),
 })
 
 
